@@ -24,13 +24,13 @@ export default class LoginScreen extends React.Component {
           catch(error){
             switch (error.code) {
               case 'auth/user-not-found':
-                Alert.alert("user dosen't exists")
-                console.log("doesn't exist")
-                break
+                Alert.alert("user dosen't exists");
+                console.log("doesn't exist");
+                break;
               case 'auth/invalid-email':
-                Alert.alert('incorrect email or password')
-                console.log('invaild')
-                break
+                Alert.alert('incorrect email or password');
+                console.log('invaild');
+                break;
             }
           }
         }
@@ -41,7 +41,7 @@ export default class LoginScreen extends React.Component {
 
   render(){
       return(
-        <KeyboardAvoidingView style = {{alignItems:'center',marginTop:20}}>
+        <KeyboardAvoidingView style = {{alignItems:'center',marginTop:20}} behavior="padding">
         <View>
           <Image
             source={require("../assets/booklogo.jpg")}
@@ -79,8 +79,7 @@ export default class LoginScreen extends React.Component {
 
         </View>
       </KeyboardAvoidingView>
-
-      )
+    )
   }
 }
 
